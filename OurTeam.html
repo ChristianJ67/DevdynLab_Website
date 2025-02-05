@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Developmental Dynamics Lab</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        .navbar-brand img { max-height: 40px; }
+        body { padding-top: 70px; padding-bottom: 100px; }
+        .footer { 
+            position: fixed; 
+            left: 0; 
+            bottom: 0; 
+            width: 100%; 
+            background-color: #f8f9fa; 
+            color: black; 
+            text-align: center; 
+            padding: 10px; 
+        }
+
+        /* Header Section */
+        .header-container {
+            background-color: #f0f0f0; 
+            padding: 20px 20px; 
+            margin: 20px auto; 
+            width: 100%; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border-radius: 8px; 
+        }
+
+        .header-title { 
+            font-size: 2rem; 
+            font-weight: bold; 
+            margin: 0; 
+            color: #000; 
+        }
+
+        .header-image {
+            width: 100px; 
+            height: auto; 
+            margin-left: 20px; 
+        }
+
+        /* Principal Investigator and Graduate Students Title */
+        .section-title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333; 
+        }
+
+        /* Team Section */
+        .team-section { 
+            display: flex; 
+            align-items: center; 
+            margin-top: 20px; 
+            background-color: #f9f9f9; 
+            border-radius: 8px; 
+            padding: 20px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        .profile-image { 
+            width: 150px; 
+            height: 200px; 
+            margin-right: 20px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            border: 2px solid #000; 
+        }
+
+        .text-section {
+            flex: 1;
+            padding: 20px; 
+            background-color: #fff;
+            border-radius: 8px; 
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+        }
+
+        .small-text { 
+            font-size: 1rem; 
+            margin-bottom: 0.5rem; 
+            line-height: 1.6; 
+            color: #333; 
+        }
+
+        .indented { 
+            margin-left: 20px; 
+            padding-left: 10px; 
+            border-left: 2px solid #ccc; 
+        }
+
+        .team-name { 
+            font-size: 1.3rem; 
+            font-weight: bold; 
+            color: #000; 
+            margin-bottom: 15px; 
+        }
+
+        .detail-indented { 
+            margin-left: 40px; 
+            padding-left: 10px; 
+            border-left: 2px solid #ddd; 
+        }
+
+        a {
+            color: #007bff; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        /* Research Assistants Grid */
+        .research-assistants-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .research-assistant {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .research-assistant img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 2px solid #000;
+        }
+
+        .research-assistant .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .research-assistant .bio {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 1.5rem; 
+            }
+            .team-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%; 
+                max-width: 300px; 
+            }
+            .research-assistants-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .research-assistant {
+                width: 100%;
+            }
+            .footer {
+                position: fixed; left: 0; bottom: 0; width: 100%; background-color: #f8f9fa; color: black; text-align: center; padding: 10px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="DevelopmentalDynamicsLab.html">
+                <img src="LabPictures/DevdynLogo.png" alt="Developmental Dynamics Lab Logo" class="mr-2">
+                <strong>Developmental Dynamics Lab</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="DevelopmentalDynamicsLab.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Participate.html">Participate</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="OurTeam.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="opportunities.html">Opportunities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Publications.html">Publications</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header-container">
+            <h1 class="header-title">Meet Our Research Team</h1>
+            <img src="LabPictures/Clipart_Team.png" alt="Team Clipart" class="header-image">
+        </div>
+        
+        <div class="section-title">Principal Investigator</div>
+        <div class="team-section">
+            <div>
+                <div class="team-name">Dr. Drew Abney</div>
+                <img src="DevDynLab_Bios/CoreTeam_Pictures/Drew.png" alt="Dr. Drew Abney" class="profile-image img-fluid">
+            </div>
+            <div class="text-section">
+                <ul class="small-text">
+                    <li>Email: <a href="mailto:Drew.abney@uga.edu">Drew.abney@uga.edu</a></li>
+                    <li>Current position:</li>
+                    <li class="indented">Graduate Coordinator & <a href="https://psychology.uga.edu/" style="text-decoration: underline;">Associate Professor of Psychology at the University of Georgia</a></li>
+                    <li class="indented">Faculty Affiliate in UGA's <a href="https://www.ai.uga.edu/" style="text-decoration: underline;">Artificial Intelligence Institute</a></li>
+                    <li>Postdoctoral Fellow (2016-2019) in Developmental Psychology at Indiana University</li>
+                    <li>Ph.D (2016) in Cognitive and Information Sciences at the University of California, Merced</li>
+                    <li>M.S. (2012) in Quantitative Psychology and Cognitive/Behavioral Science at Illinois State University</li>
+                    <li><a href="https://psyc.franklin.uga.edu/sites/default/files/CVs/Abney_CV_norefs_8.pdf" style="text-decoration: underline;">Click here for CV</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-title">Graduate Students</div>
+        <div class="team-section">
+            <div>
+                <div class="team-name">Grace Steffen</div>
+                <img src="DevDynLab_Bios/CoreTeam_Pictures/Grace.png" alt="Grace Steffen" class="profile-image img-fluid">
+            </div>
+            <div class="text-section">
+                <ul class="small-text">
+                    <li>Email: <a href="mailto:grace.steffen@uga.edu">Grace.steffen@uga.edu</a></li>
+                    <li>Graduate School: Psychology (BBS), Year Two</li>
+                    <li>Undergrad: University of Alabama (2023)</li>
+                    <li class="detail-indented">Majors: Bachelor of Science in Biology | Bachelor of Arts in Psychology</li>
+                    <li class="detail-indented">Minors: Spanish and Liberal Arts</li>
+                    <li>Research Interest: The relationship between behavior and physiology during development.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div>
+                <div class="team-name">Christian Jerry</div>
+                <img src="DevDynLab_Bios/CoreTeam_Pictures/Christian.png" alt="Christian Jerry" class="profile-image img-fluid">
+            </div>
+            <div class="text-section">
+                <ul class="small-text">
+                    <li>Email: <a href="mailto:Christian.jerry@uga.edu">Christian.jerry@uga.edu</a></li>
+                    <li>Graduate School: Psychology (BBS), Year Three</li>
+                    <li>Undergrad: Indiana University Bloomington (2021)</li>
+                    <li class="detail-indented">Majors: Bachelor of Arts in Psychology</li>
+                    <li>Research Interest: How early sensorimotor experiences impact infant behaviors.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div>
+                <div class="team-name">Christopher Bell</div>
+                <img src="DevDynLab_Bios/CoreTeam_Pictures/Chris.png" alt="Christopher Bell" class="profile-image img-fluid">
+            </div>
+            <div class="text-section">
+                <ul class="small-text">
+                    <li>Email: <a href="mailto:Bellchri@uga.edu">Bellchri@uga.edu</a></li>
+                    <li>Graduate School: Psychology (BBS), Year Four</li>
+                    <li>Undergrad: Grinnell College (2018)</li>
+                    <li class="detail-indented">Majors: Bachelor of Arts in Psychology (w/ Honors)</li>
+                    <li>Research Interest: How motor skills develop in infants and toddlers.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section-title">Research Assistants</div>
+        <div class="research-assistants-grid">
+            <!-- Research Assistant 1 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/AlexaK.png" alt="Alexa Knightlinger" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Alexa Knightlinger</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology with an emphasis in Neuroscience) Alexa plans to attend graduate school in neuroscience.
+                </div>
+            </div>
+        
+            <!-- Research Assistant 2 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/AvaM.jpg" alt="Ava McDonald" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Ava McDonald</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology): Ava plans to attend graduate school in clinical psychology.
+                </div>
+            </div>
+        
+            <!-- Research Assistant 3 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/AmandaK.jpeg" alt="Amanda Kolberg" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Amanda Kolberg</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology & Cognitive Science) Amanda is passionate about cognitive neuroscience research.
+                </div>
+            </div>
+        
+            <!-- Research Assistant 4 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/AngelineJ.jpeg" alt="Angeline Justus" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Angeline Justus</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Biomedical Physiology): Angeline plans to attend medical school.
+                </div>
+            </div>
+
+            <!-- Research Assistant 5 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/AveryH.jpeg" alt="Avery Hughes" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Avery Hughes</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology): Avery plans to attend graduate school in psychology.
+                </div>
+            </div>
+
+            <!-- Research Assistant 6 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/BhumyP.png" alt="Bhumy Patel" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Bhumy Patel</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology and Biomedical Physiology): Bhumy plans to attend medical school to become a physician. 
+                </div>
+            </div>
+
+            <!-- Research Assistant 7 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/EmmaG.png" alt="Emma Gartland" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Emma Gartland</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology & HDFS) Emma plans to attend graduate school and pursue a career in developmental psychology.
+                </div>
+            </div>
+
+            <!-- Research Assistant 8 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/JadeH.png" alt="Jade Harris" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Jade Harris</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology.) Jade plans to attend graduate school and become a developmental psychologist.
+                </div>
+            </div>
+
+            <!-- Research Assistant 9 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/JemeyaT.jpg" alt="Jemeya Thomas" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Jemeya Thomas</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology & HDFS ) Jemeya plans to attend graduate school and pursue a career in developmental and autism research. 
+                </div>
+            </div>
+
+            <!-- Research Assistant 10 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/KaitlynM.jpg" alt="Kaitlyn Meland" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Kaitlyn Meland</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology) Kaitlyn plans to attend graduate school to become a clinical psychologist.
+                </div>
+            </div>
+
+            <!-- Research Assistant 11 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/SabinaL.jpg" alt="Sabina Lee" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Sabina Lee</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology): Sabina plans to attend graduate school to become a school counselor for high school students, helping them chart a course toward academic success and personal growth.
+                </div>
+            </div>
+
+            <!-- Research Assistant 12 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/NeelieP.jpg" alt="Neelie Perno" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Neelie Perno</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology) Neelie plans to attend graduate school and pursue a career in clinical psychology, specializing in child and adolescent mental health.
+                </div>
+            </div>
+
+            <!-- Research Assistant 13 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/SabrinaG.jpg" alt="Sabrina Golden" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Sabrina Golden</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology & Business): Sabrina plans to get her masters in Industrial and Organizational Psychology, so that she can bring her fascination of Psychology and love for helping others into a business-oriented field.
+                </div>
+            </div>
+
+            <!-- Research Assistant 14 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/SamanthaS.png" alt="Samantha Sands" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Samantha Sands</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Biology): Samantha plans to attend medical school and pursue a career in pediatric medicine.
+                </div>
+            </div>
+        
+            <!-- Research Assistant 15 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/SamiraB.jpg" alt="Samira Butts" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Samira Butts</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology) Samira plans to attend graduate school and later pursue a career in mental health.
+                </div>
+            </div>
+
+            <!-- Research Assistant 16 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/SarahE.jpg" alt="Sarah Jane Ellington" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Sarah Jane Ellington</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology & HDFS) Sarah Jane plans to attend graduate school and pursue a career as a school psychologist.
+                </div>
+            </div>
+
+            <!-- Research Assistant 17 -->
+            <div class="research-assistant">
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                    <img src="DevDynLab_Bios/Undergrad_Pictures/SophieM.png" alt="Sophie Mazzella" style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                    <div class="name" style="text-align: center; font-weight: bold; margin-top: 10px;">Sophie Mazzella</div>
+                </div>
+                <div class="bio" style="background-color: #ffffff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    (Major: Psychology, Human Services): Sophie plans to attend graduate school to become a school psychologist.
+                </div>
+            </div>
+        </div> <!-- End of Research Assistants Grid -->
+
+    </div> <!-- End of container -->
+
+    <div class="footer">
+        The Developmental Dynamics Lab | University of Georgia Psychology Department’s building at 125 Baldwin St., Athens, GA, 30602 | Dr. Drew Abney, Principal Investigator
+    </div>
+
+    <!-- Bootstrap and other necessary scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
